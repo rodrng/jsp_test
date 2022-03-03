@@ -5,11 +5,41 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인 화면</title>
+<script type="text/javascript">
+function checkInput()
+{
+	var f = document.dataInput;
+	if(f.id.value == "")
+		{
+			alert("아이디가 입력되지 않았습니다. 다시 입력해주세요!");
+			//f.id.select();
+			f.id.focus();
+			return false;
+		}
+	else if(f.name.value == "")
+	{
+		alert("이름이 입력되지 않았습니다. 다시 입력해주세요!");
+		//f.name.select();
+		f.name.focus();
+		return false;
+	}
+	else if(f.pw.value == "")
+	{
+		alert("비밀번호가 입력되지 않았습니다. 다시 입력해주세요!");
+		//f.pw.select();
+		f.pw.focus();
+		return false;
+	}
+	else return true;
+}
+</script>
+
+
 </head>
 <body>
 	Home > Login
 	<hr>
-	<form action="login.jsp" method="get">
+	<form action="login.jsp" method="get" name="dataInput" onsubmit="return checkInput()">
 		<fieldset style="width:400px">
 			<legend>회원 로그인</legend>
 			ID : <br>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인처리후</title>
+<title>로그인처리</title>
 </head>
 <body>
 	<%
@@ -29,9 +29,13 @@
 	* 고향 : <%= home %><br>
 	* 취미 : 
 	<%
-		for(int i=0; i<phobby.length; i++){
-			out.println(phobby[i]);
-		}
+			if(phobby != null)
+			{
+				for(int i = 0;i<phobby.length;i++)
+				{				
+					out.println(" "+ phobby[i]);
+				}
+			}
 	%>
 	<br>
 	* 자기소개 : <%= intro %> <br>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인처리</title>
+<title>로그인처리후</title>
 </head>
 <body>
 	<%
